@@ -63,7 +63,7 @@ function extractUserAdditions(description) {
   const match = description.match(
     /<!--- user additions start --->([\s\S]*?)<!--- user additions end --->/,
   );
-  return match ? match[1].trim() : "";
+  return match ? match[1].trim() : description.trim();
 }
 
 // Generate PR description
