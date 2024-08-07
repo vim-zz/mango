@@ -11,4 +11,4 @@ automations:
       - action: update-description@v1
         args:
           description: |
-            {{ branch | generatePRDescription(pr, repo, source) }}
+            {{ branch | generateDescription(pr, repo, source) }}

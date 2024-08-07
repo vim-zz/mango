@@ -52,7 +52,7 @@ function extractUserAdditions(description) {
 }
 
 // Generate PR description
-async function generatePRDescription(branch, pr, repo, source, callback) {
+async function generateDescription(branch, pr, repo, source, callback) {
     if (process.env[__filename]) {
         return callback(null, process.env[__filename]);
     }
@@ -123,4 +123,4 @@ ${changesWithoutLastBr}
     return callback(null, process.env[__filename]);
 }
 
-module.exports = { filter: generatePRDescription, async: true };
+module.exports = { filter: generateDescription, async: true };
