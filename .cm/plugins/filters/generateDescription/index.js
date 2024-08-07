@@ -1,3 +1,17 @@
+/**
+ * @module generateDescription
+ * @description A gitStream plugin to auto-generate pull request descriptions based on commit messages and other criteria.
+ * @param {Object} branch - The current branch object.
+ * @param {Object} pr - The pull request object.
+ * @param {Object} repo - The repository object.
+ * @param {Object} source - The source object containing diff information.
+ * @param {function} callback - The callback function.
+ * @returns {Object} Returns the generated PR description.
+ * @example {{ branch | generateDescription(pr, repo, source) }}
+ * @license MIT
+**/
+
+
 // Parse commit messages
 function parseCommitMessages(messages) {
   const commitTypes = {
